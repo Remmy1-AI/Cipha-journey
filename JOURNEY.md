@@ -5,17 +5,19 @@
 
 ---
 
-## The build (103+ days)
+## The build (106 days)
 
 | | |
 |---|---|
-| **Started** | 27 March 2026 |
-| **Still running** | July 2026 — no multi-week gaps |
+| **Started** | **28 March 2026** — KNUST Cursor hackathon |
+| **Today** | **11 July 2026** — still running |
+| **Calendar days** | **106 days** inclusive (not 103 — that count stopped at 8 Jul) |
 | **Schedule** | 1:00 PM → 2:00 AM daily (~13 hours) |
-| **Total hours** | ~1,300+ estimated |
+| **Total hours** | **~1,378 hours** estimated (106 × 13) |
+| **Evidence** | 1,000+ logged Cursor messages, 69+ sessions, zero multi-week gaps |
 | **Builder** | Solo — Sylvester Dapaah, KNUST, Kumasi |
 
-This is not the founder's first attempt. A self-reported graveyard of 12+ abandoned projects (Gaia, REFly, Rekon360, Trego, Nura, and others) preceded CiPHA. What changed: focus held for 103 consecutive days — the longest documented run.
+This is not the founder's first attempt. A self-reported graveyard of 12+ abandoned projects (Gaia, REFly, Rekon360, Trego, Nura, and others) preceded CiPHA. What changed: focus held for **106 consecutive days** — the longest documented run.
 
 **Rhythm (from build logs):** zero morning sessions. Ramp starts at 1 PM. Peak activity at 5 PM and 7 PM. Regular post-midnight pushes until 2 AM. Tuesday, Thursday, and Saturday are the heaviest build days.
 

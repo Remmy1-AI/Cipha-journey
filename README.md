@@ -79,16 +79,20 @@ Solo-founded from Kumasi (KNUST). Not a hackathon weekend — a sustained build.
 
 | Metric | Value |
 |--------|-------|
-| **Days building** | **103+** consecutive days (27 Mar 2026 → present) |
-| **Daily window** | **1:00 PM → 2:00 AM** — every day |
-| **Estimated build hours** | **~1,300+ hours** (13 hrs/day × 103 days) |
+| **Started** | **28 March 2026** — KNUST Cursor hackathon ($50 participation credits → first CiPHA ship) |
+| **Days building** | **106 days** (28 Mar → 11 Jul 2026, inclusive) |
+| **Daily window** | **1:00 PM → 2:00 AM** — every day (~13 hours) |
+| **Estimated build hours** | **~1,378 hours** (106 days × 13 hrs/day) |
+| **Cursor sessions logged** | 1,000+ user messages across 69+ sessions (Mar 28 → Jul 2026) |
 | **Longest gap** | None longer than a few days in the entire run |
 | **Peak hours** | 5 PM and 7 PM; post-midnight overruns common |
 | **Morning work** | Zero — afternoon-evening builder by rhythm |
 
+*The old “103 days” figure counted only to 8 July. As of 11 July, the run is **106 days** from hackathon day.*
+
 **Consistency:** After years of pivoting across 12+ abandoned projects, CiPHA is the longest documented focus run. Pivots now happen *inside* the product — deliberation chat → trading desk → partner API lane — not away from it.
 
-**Progress in 103 days:**
+**Progress in 106 days:**
 
 - CiPHA 1.0 deliberation product shipped → split into Markets
 - Full execution spine live: council → validator → MT5 + Deriv
