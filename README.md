@@ -73,16 +73,43 @@ See [ARCHITECTURE.md](./ARCHITECTURE.md) for more detail.
 
 ---
 
-## Journey
+## Build discipline
 
-Built from Ghana (KNUST) since May 2026:
+Solo-founded from Kumasi (KNUST). Not a hackathon weekend — a sustained build.
 
-- **May 2026** — Execution spine: council → validator → broker pipeline live
-- **May–Jun 2026** — Auth, mobile shell, Deriv OAuth, rules coach, multi-tenant bridge → MetaApi migration
-- **Jun–Jul 2026** — Retail autonomy, desktop shell, council reliability (two-hop architecture), Agent Whiskey lane
-- **Jul 2026** — B2B partner forward test with QuantNexusCapital (crypto council → external signal book)
+| Metric | Value |
+|--------|-------|
+| **Days building** | **103+** consecutive days (27 Mar 2026 → present) |
+| **Daily window** | **1:00 PM → 2:00 AM** — every day |
+| **Estimated build hours** | **~1,300+ hours** (13 hrs/day × 103 days) |
+| **Longest gap** | None longer than a few days in the entire run |
+| **Peak hours** | 5 PM and 7 PM; post-midnight overruns common |
+| **Morning work** | Zero — afternoon-evening builder by rhythm |
+
+**Consistency:** After years of pivoting across 12+ abandoned projects, CiPHA is the longest documented focus run. Pivots now happen *inside* the product — deliberation chat → trading desk → partner API lane — not away from it.
+
+**Progress in 103 days:**
+
+- CiPHA 1.0 deliberation product shipped → split into Markets
+- Full execution spine live: council → validator → MT5 + Deriv
+- 37 backend APIs, 59 DB migrations, 37 web pages — solo
+- Retail signals funnel (MoMo/USDT), affiliate portal, admin cockpit
+- B2B partner forward test integrated (QuantNexusCapital) in under 72 hours from first call
+- Council reliability hardened: two-hop architecture, orphan recovery, partner signal book
 
 Full timeline: [JOURNEY.md](./JOURNEY.md)
+
+---
+
+## Journey (milestones)
+
+Built from Ghana since March 2026:
+
+- **Mar 2026** — CiPHA 1.0 born; 103-day focus clock starts
+- **May 2026** — Markets repo; execution spine: council → validator → broker pipeline live
+- **May–Jun 2026** — Auth, mobile shell, Deriv OAuth, rules coach, bridge → MetaApi migration
+- **Jun–Jul 2026** — Retail autonomy, desktop shell, council reliability, Agent Whiskey lane
+- **Jul 2026** — B2B partner forward test with QuantNexusCapital (crypto council → external signal book)
 
 ---
 

@@ -5,6 +5,31 @@
 
 ---
 
+## The build (103+ days)
+
+| | |
+|---|---|
+| **Started** | 27 March 2026 |
+| **Still running** | July 2026 — no multi-week gaps |
+| **Schedule** | 1:00 PM → 2:00 AM daily (~13 hours) |
+| **Total hours** | ~1,300+ estimated |
+| **Builder** | Solo — Sylvester Dapaah, KNUST, Kumasi |
+
+This is not the founder's first attempt. A self-reported graveyard of 12+ abandoned projects (Gaia, REFly, Rekon360, Trego, Nura, and others) preceded CiPHA. What changed: focus held for 103 consecutive days — the longest documented run.
+
+**Rhythm (from build logs):** zero morning sessions. Ramp starts at 1 PM. Peak activity at 5 PM and 7 PM. Regular post-midnight pushes until 2 AM. Tuesday, Thursday, and Saturday are the heaviest build days.
+
+**How pivots work now:** not new repos — evolution inside one product family.
+
+```
+CiPHA 1.0 (deliberation chat)
+    → CiPHA Markets (trading desk + execution)
+        → Partner B2B lane (institutional forward test)
+            → Self-improving playbooks (roadmap)
+```
+
+---
+
 ## Before Markets: CiPHA 1.0
 
 The founder was copy-pasting between ChatGPT, Claude, Gemini, and others — same context, different rooms, human synthesis in the middle.
