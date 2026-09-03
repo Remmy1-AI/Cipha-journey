@@ -1,10 +1,10 @@
-# CiPHA Markets
+# Cipha Markets
 
-**A non-custodial, glass-box AI trading desk.**
+Cipha Markets is MetaTrader 5 for AI agents. Money stays at your broker. Models on the desk debate, code decides whether a trade is allowed.
 
-Users connect their own broker accounts (MT5 for forex/metals/crypto CFDs, Deriv for binaries). A multi-model council deliberates in full public view — transcript, polls, abstains, validator results. Models **propose** trades; **code** (guardrails + validator) decides if an order is allowed. Nothing executes unless rules pass and the user authorizes.
+**Live:** [cipha.app](https://cipha.app)
 
-CiPHA never holds user funds. It is infrastructure between **AI deliberation** and **the user's broker**.
+Not a broker. Not custodial. Not a signal group. Not [Cipha Sounds](https://en.wikipedia.org/wiki/Cipha_Sounds) the DJ.
 
 ---
 
@@ -13,39 +13,37 @@ CiPHA never holds user funds. It is infrastructure between **AI deliberation** a
 | Resource | Link |
 |----------|------|
 | **Website** | [cipha.app](https://cipha.app) |
-| **Trading desk** | [ciphamarkets.vercel.app](https://ciphamarkets.vercel.app) |
-| **Partner forward test** | [signals.quantnexuscapital.com](https://signals.quantnexuscapital.com) |
-| **CiPHA 1.0** (deliberation product) | [cipha.vercel.app](https://cipha.vercel.app) |
+| **App** | [ciphamarkets.vercel.app](https://ciphamarkets.vercel.app) |
+| **Cipha 1.0** (human + model rooms) | [cipha.vercel.app](https://cipha.vercel.app) |
 
 ---
 
-## What makes CiPHA different
+## What it is
 
-Most AI trading products are black boxes: a signal fires, you follow it, you never see the reasoning. CiPHA is the opposite.
+Users connect their own MT4/MT5 or Deriv account. A desk of models reads the session and debates the setup in the open. Code (guardrails + validator) decides whether a trade is allowed. Nothing executes unless the rules pass.
 
-- **Glass-box council** — 10+ AI personas debate each setup; every message is stored and auditable
-- **Code gatekeeper** — guardrails and a TypeScript validator approve or reject before any broker call
-- **Non-custodial** — users keep their own MT5 / Deriv accounts; CiPHA routes orders, never holds capital
-- **Abstain is a feature** — spread too wide, poll failed, book says hold → no order, no partner signal
-- **Proof-first** — session history, outcome archives, partner delivery audit trail
+Cipha never holds user funds. It is infrastructure between the desk and the user's broker.
 
-This is not a Telegram signal bot. It is a **vertical trading operating system**.
+- **Glass-box desk** — models debate each setup; the transcript is stored and auditable
+- **Code decides** — a TypeScript validator approves or rejects before any broker call
+- **Non-custodial** — money stays at the broker; Cipha never withdraws
+- **Abstain is a feature** — if the book says hold, there is no order
+- **Proof-first** — session history and outcomes on the record
+
+This is not a Telegram signal bot.
 
 ---
 
-## Product surface
+## Product
 
-### 1. The Desk
-AI trading terminal: wake the council, debate setups, authorize execution, manage guardrails, view history.
+| Module | What it is |
+|--------|------------|
+| **Desk** ($79/mo) | Models debate, code decides, trades the connected MT4/MT5 account |
+| **Whiskey** ($49/mo) | Autonomous watcher on the tape |
+| **Binaries** ($49/mo) | Deriv fixed-payout desk |
+| **Arena** ($39/mo) | Live floor — watch desks work in real time |
 
-### 2. Retail Signals (Ghana GTM)
-Public funnel with MoMo and USDT checkout — distribution layer separate from the desk.
-
-### 3. Partner & affiliate portal
-Referral links, payouts dashboard, B2B signal API for institutional forward tests.
-
-### 4. Autonomous lanes
-Scheduled council wakes, watcher crons, and fast execution lanes — always bounded by user guardrails.
+Partner and affiliate portal is separate from the desk. The old retail signals funnel is not the product.
 
 ---
 
@@ -55,108 +53,35 @@ Scheduled council wakes, watcher crons, and fast execution lanes — always boun
 User (web / mobile)
        │
        ▼
-  Glass-box terminal  ──►  Multi-model council (10+ personas)
-       │                         │
-       │                         ▼
-       │                   Consensus poll
+  Glass-box terminal  ──►  Desk of models
        │                         │
        ▼                         ▼
-  Guardrails + validator  ◄──  Trade plan or abstain
+  Guardrails + validator  ◄──  Plan or abstain
        │
        ▼
   User's broker (MT5 via MetaApi / Deriv OAuth)
 ```
 
-Optional B2B fan-out sends validated signals to partner endpoints — with the same abstain discipline.
-
 See [ARCHITECTURE.md](./ARCHITECTURE.md) for more detail.
 
 ---
 
-## Build discipline
+## Build
 
-Solo-founded from Kumasi (KNUST). Not a hackathon weekend — a sustained build.
-
-| Metric | Value |
-|--------|-------|
-| **Started** | **28 March 2026** — KNUST Cursor hackathon ($50 participation credits → first CiPHA ship) |
-| **Days building** | **106 days** (28 Mar → 11 Jul 2026, inclusive) |
-| **Daily window** | **1:00 PM → 2:00 AM** — every day (~13 hours) |
-| **Estimated build hours** | **~1,378 hours** (106 days × 13 hrs/day) |
-| **Cursor sessions logged** | 1,000+ user messages across 69+ sessions (Mar 28 → Jul 2026) |
-| **Longest gap** | None longer than a few days in the entire run |
-| **Peak hours** | 5 PM and 7 PM; post-midnight overruns common |
-| **Morning work** | Zero — afternoon-evening builder by rhythm |
-
-*The old “103 days” figure counted only to 8 July. As of 11 July, the run is **106 days** from hackathon day.*
-
-**Consistency:** After years of pivoting across 12+ abandoned projects, CiPHA is the longest documented focus run. Pivots now happen *inside* the product — deliberation chat → trading desk → partner API lane — not away from it.
-
-**Progress in 106 days:**
-
-- CiPHA 1.0 deliberation product shipped → split into Markets
-- Full execution spine live: council → validator → MT5 + Deriv
-- 37 backend APIs, 59 DB migrations, 37 web pages — solo
-- Retail signals funnel (MoMo/USDT), affiliate portal, admin cockpit
-- B2B partner forward test integrated (QuantNexusCapital) in under 72 hours from first call
-- Council reliability hardened: two-hop architecture, orphan recovery, partner signal book
+Solo-founded. Started 28 March 2026 (KNUST Cursor hackathon). Full execution spine live: desk → validator → MT5 + Deriv. Implementation is in a private repo; this repository is public documentation only.
 
 Full timeline: [JOURNEY.md](./JOURNEY.md)
 
 ---
 
-## Journey (milestones)
-
-Built from Ghana since March 2026:
-
-- **Mar 2026** — CiPHA 1.0 born; 103-day focus clock starts
-- **May 2026** — Markets repo; execution spine: council → validator → broker pipeline live
-- **May–Jun 2026** — Auth, mobile shell, Deriv OAuth, rules coach, bridge → MetaApi migration
-- **Jun–Jul 2026** — Retail autonomy, desktop shell, council reliability, Agent Whiskey lane
-- **Jul 2026** — B2B partner forward test with QuantNexusCapital (crypto council → external signal book)
-
----
-
-## Scale (order of magnitude)
-
-| Area | Approx. |
-|------|---------|
-| Backend APIs & crons | 37 deployed |
-| Database migrations | 59 |
-| Web pages | 37 |
-| Strategy playbooks | 8 |
-| Docs (internal) | 50+ |
-
-Mid-size startup product — not a weekend script.
-
----
-
-## Roadmap themes
-
-- **Self-improving playbooks** — meta-strategist layer that learns from session outcomes while staying glass-box
-- **Partner proof epochs** — compounding signal book, forward-test audit trail before capital conversations scale
-- **Distribution** — Ghana signals funnel, affiliates, institutional API lane
-
----
-
-## Repository note
-
-**This repository is public documentation only** — product overview, journey, and architecture for partners and investors.
-
-The full implementation (source code, database schema, deployment config) lives in a **private repository** and is shared on request during live product walkthroughs.
-
----
-
 ## Founder
 
-**Sylvester Dapaah** — Founder & CEO, CiPHA Markets  
-Kumasi, Ghana
+**Sylvester Dapaah** — Founder, Cipha Markets
 
-- Email: dapaahsylvester5@gmail.com
 - GitHub: [github.com/Remmy1-AI](https://github.com/Remmy1-AI)
 
 ---
 
 ## License
 
-Documentation © 2026 CiPHA Markets. All rights reserved. No code is published in this repository.
+Documentation © 2026 Cipha Markets. All rights reserved. No code is published in this repository.
