@@ -1,6 +1,6 @@
 # Cipha Markets
 
-Cipha Markets is MetaTrader 5 for AI agents. Money stays at your broker. Models on the desk debate, code decides whether a trade is allowed.
+Cipha Markets puts AI agents on your trading account. Money stays at your broker. Models on the desk debate, code decides whether a trade is allowed.
 
 **Live:** [cipha.app](https://cipha.app)
 
@@ -20,7 +20,7 @@ Not a broker. Not custodial. Not a signal group. Not [Cipha Sounds](https://en.w
 
 ## What it is
 
-Users connect their own MT4/MT5 or Deriv account. A desk of models reads the session and debates the setup in the open. Code (guardrails + validator) decides whether a trade is allowed. Nothing executes unless the rules pass.
+Users connect their own broker or prop account. A desk of models reads the session and debates the setup in the open. Code (guardrails + validator) decides whether a trade is allowed. Nothing executes unless the rules pass.
 
 Cipha never holds user funds. It is infrastructure between the desk and the user's broker.
 
@@ -38,7 +38,7 @@ This is not a Telegram signal bot.
 
 | Module | What it is |
 |--------|------------|
-| **Desk** ($79/mo) | Models debate, code decides, trades the connected MT4/MT5 account |
+| **Desk** ($79/mo) | Models debate, code decides, trades the connected broker or prop account |
 | **Whiskey** ($49/mo) | Autonomous watcher on the tape |
 | **Binaries** ($49/mo) | Deriv fixed-payout desk |
 | **Arena** ($39/mo) | Live floor — watch desks work in real time |
@@ -59,7 +59,7 @@ User (web / mobile)
   Guardrails + validator  ◄──  Plan or abstain
        │
        ▼
-  User's broker (MT5 via MetaApi / Deriv OAuth)
+  User's broker (Connect: native APIs / Deriv / optional MetaApi)
 ```
 
 See [ARCHITECTURE.md](./ARCHITECTURE.md) for more detail.
@@ -68,7 +68,7 @@ See [ARCHITECTURE.md](./ARCHITECTURE.md) for more detail.
 
 ## Build
 
-Solo-founded. Started 28 March 2026 (KNUST Cursor hackathon). Full execution spine live: desk → validator → MT5 + Deriv. Implementation is in a private repo; this repository is public documentation only.
+Solo-founded. Started 28 March 2026 (KNUST Cursor hackathon). Full execution spine live: desk → validator → broker. Implementation is in a private repo; this repository is public documentation only.
 
 Full timeline: [JOURNEY.md](./JOURNEY.md)
 
